@@ -1,0 +1,81 @@
+{
+  "name": "occupational-health-management",
+  "version": "1.0.0",
+  "description": "职业健康管理系统 - 基于 Ant Design 的辐射安全管理平台",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@ant-design/colors": "^7.2.1",
+    "@ant-design/icons": "^5.6.1",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
+    "antd": "^5.25.3",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.11",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.0.1",
+    "react-scripts": "5.0.1",
+    "typescript": "~5.8.2",
+    "web-vitals": "^4.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:fix": "eslint src --ext .ts,.tsx --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.19.0",
+    "@typescript-eslint/parser": "^8.19.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.4.1"
+  },
+  "proxy": "http://localhost:8080",
+  "keywords": [
+    "occupational-health",
+    "radiation-safety",
+    "antd",
+    "react",
+    "typescript",
+    "management-system",
+    "healthcare"
+  ],
+  "author": "Occupational Health Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/occupational-health-management.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/occupational-health-management/issues"
+  }
+}
