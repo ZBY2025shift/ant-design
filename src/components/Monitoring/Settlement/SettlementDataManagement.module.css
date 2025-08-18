@@ -1,0 +1,183 @@
+.dataManagement {
+  width: 100%;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F0F0F0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions .ant-btn {
+  height: 32px;
+  border-radius: 4px;
+}
+
+.actions .ant-btn-primary {
+  background: #0A2463;
+  border-color: #0A2463;
+}
+
+.actions .ant-btn-primary:hover {
+  background: #081d52;
+  border-color: #081d52;
+}
+
+.table {
+  margin-bottom: 16px;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  background-color: #F5F5F5;
+  color: #333333;
+  font-weight: 500;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.table :global(.ant-table-tbody > tr:hover > td) {
+  background-color: #F9FAFB;
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 12px 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #F0F0F0;
+}
+
+.pagination :global(.ant-pagination) {
+  margin: 0;
+}
+
+.modal :global(.ant-modal-header) {
+  border-bottom: 1px solid #F0F0F0;
+  margin-bottom: 20px;
+}
+
+.modal :global(.ant-modal-title) {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.singleSettlement,
+.batchImport {
+  margin-top: 20px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 6px;
+  border: 1px solid #F0F0F0;
+}
+
+.singleSettlement h4,
+.batchImport h4 {
+  margin-bottom: 12px;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.singleSettlement :global(.ant-space) {
+  width: 100%;
+}
+
+.singleSettlement :global(.ant-form-item) {
+  margin-bottom: 12px;
+}
+
+.batchImport :global(.ant-form-item) {
+  margin-bottom: 0;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters {
+    justify-content: flex-start;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 12px 0;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters > * {
+    width: 100% !important;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .actions > * {
+    width: 100%;
+  }
+  
+  .table {
+    font-size: 12px;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+  
+  .singleSettlement :global(.ant-space) {
+    flex-direction: column;
+  }
+  
+  .singleSettlement :global(.ant-space-item) {
+    width: 100%;
+  }
+  
+  .singleSettlement :global(.ant-form-item) {
+    width: 100%;
+  }
+  
+  .singleSettlement input,
+  .singleSettlement :global(.ant-select) {
+    width: 100% !important;
+  }
+}
