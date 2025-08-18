@@ -1,0 +1,132 @@
+.airStationData {
+  width: 100%;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #F0F0F0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.actions .ant-btn {
+  height: 32px;
+  border-radius: 4px;
+}
+
+.actions .ant-btn-primary {
+  background: #0A2463;
+  border-color: #0A2463;
+}
+
+.actions .ant-btn-primary:hover {
+  background: #081d52;
+  border-color: #081d52;
+}
+
+.table {
+  margin-bottom: 16px;
+}
+
+.table :global(.ant-table-thead > tr > th) {
+  background-color: #F5F5F5;
+  color: #333333;
+  font-weight: 500;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 12px;
+}
+
+.table :global(.ant-table-tbody > tr:hover > td) {
+  background-color: #F9FAFB;
+}
+
+.table :global(.ant-table-tbody > tr > td) {
+  border-bottom: 1px solid #E0E0E0;
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 16px;
+  border-top: 1px solid #F0F0F0;
+}
+
+.pagination :global(.ant-pagination) {
+  margin: 0;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters {
+    justify-content: flex-start;
+  }
+  
+  .actions {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar {
+    padding: 12px 0;
+  }
+  
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .filters > * {
+    width: 100% !important;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .actions > * {
+    width: 100%;
+  }
+  
+  .table {
+    font-size: 10px;
+  }
+  
+  .table :global(.ant-table-thead > tr > th) {
+    font-size: 10px;
+    padding: 6px 4px;
+  }
+  
+  .table :global(.ant-table-tbody > tr > td) {
+    font-size: 10px;
+    padding: 6px 4px;
+  }
+  
+  .pagination {
+    justify-content: center;
+  }
+}

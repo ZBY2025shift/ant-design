@@ -1,0 +1,155 @@
+.overview {
+  width: 100%;
+}
+
+.monitoringCard,
+.chartCard {
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.monitoringCard:hover,
+.chartCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.monitoringCard :global(.ant-card-head) {
+  border-bottom: 1px solid #F0F0F0;
+  padding: 12px 20px;
+}
+
+.monitoringCard :global(.ant-card-head-title) {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.monitoringCard :global(.ant-card-body) {
+  padding: 15px;
+}
+
+.smallCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.smallCard {
+  background: #F9FAFB;
+  border: 1px solid #E8E8E8;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  min-height: 80px;
+}
+
+.smallCard:hover {
+  background: #F0F0F0;
+  transform: translateY(-1px);
+}
+
+.smallCardIcon {
+  font-size: 20px;
+  color: #0A2463;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.smallCardContent {
+  flex: 1;
+}
+
+.smallCardTitle {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.smallCardValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.chartCard {
+  height: 240px;
+}
+
+.chartCard :global(.ant-card-body) {
+  padding: 15px;
+  height: 100%;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+  .smallCardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .smallCard {
+    min-height: 70px;
+    padding: 10px;
+  }
+  
+  .smallCardIcon {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  
+  .smallCardValue {
+    font-size: 14px;
+  }
+  
+  .chartCard {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .smallCardsGrid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .smallCard {
+    min-height: 60px;
+    padding: 8px;
+  }
+  
+  .smallCardIcon {
+    font-size: 16px;
+    margin-right: 6px;
+  }
+  
+  .smallCardTitle {
+    font-size: 11px;
+  }
+  
+  .smallCardValue {
+    font-size: 12px;
+  }
+  
+  .chartCard {
+    height: 200px;
+  }
+  
+  .chartCard :global(.ant-card-body) {
+    padding: 10px;
+  }
+  
+  .monitoringCard :global(.ant-card-head) {
+    padding: 8px 15px;
+  }
+  
+  .monitoringCard :global(.ant-card-head-title) {
+    font-size: 14px;
+  }
+  
+  .monitoringCard :global(.ant-card-body) {
+    padding: 10px;
+  }
+}

@@ -1,0 +1,262 @@
+.overview {
+  width: 100%;
+}
+
+.section {
+  margin-bottom: 32px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  margin: 0 0 16px 0;
+}
+
+.dataCard {
+  height: 100px;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.dataCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.cardContent {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 15px;
+}
+
+.cardIcon {
+  font-size: 24px;
+  color: #0A2463;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.cardInfo {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.cardData {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dataItem {
+  display: flex;
+  align-items: center;
+}
+
+.dataLabel {
+  font-size: 12px;
+  color: #666666;
+  margin-right: 4px;
+}
+
+.dataValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.alert {
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.airStationCard {
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.airGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.airCard {
+  background: white;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.airCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.exceededCard {
+  border-color: #E53935;
+  background: #FFF5F5;
+}
+
+.airCardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.airCardIcon > :first-child {
+  font-size: 20px;
+  color: #0A2463;
+}
+
+.warningIcon {
+  font-size: 16px;
+  color: #E53935;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.airCardContent {
+  flex: 1;
+}
+
+.airCardTitle {
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.airCardValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333;
+  display: flex;
+  align-items: baseline;
+}
+
+.exceededValue {
+  color: #E53935;
+}
+
+.unit {
+  font-size: 12px;
+  color: #999999;
+  margin-left: 2px;
+  font-weight: normal;
+}
+
+/* 响应式适配 */
+@media (max-width: 1200px) {
+  .airGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  
+  .dataCard {
+    height: 90px;
+  }
+  
+  .cardContent {
+    padding: 12px;
+  }
+  
+  .cardIcon {
+    font-size: 20px;
+  }
+  
+  .dataValue {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .sectionHeader > :last-child {
+    width: 100%;
+  }
+  
+  .airGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+  
+  .airCard {
+    min-height: 80px;
+    padding: 10px;
+  }
+  
+  .airCardValue {
+    font-size: 14px;
+  }
+  
+  .airCardIcon > :first-child {
+    font-size: 18px;
+  }
+  
+  .dataCard {
+    height: 80px;
+  }
+  
+  .cardContent {
+    padding: 10px;
+  }
+  
+  .cardIcon {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+  
+  .cardTitle {
+    font-size: 12px;
+  }
+  
+  .dataValue {
+    font-size: 12px;
+  }
+  
+  .dataLabel {
+    font-size: 10px;
+  }
+}
